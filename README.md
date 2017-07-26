@@ -6,15 +6,15 @@
 
 >[Click on the download MyTomcat installation program](https://github.com/getActivity/MyTomcat/MyTomcat_3.0.apk)
 
->![](/screenshot/MyTomcat1_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat1_zh.png)
+>![](/screenshot/MyTomcat1_en.png)![](/screenshot/MyTomcat1_zh.png)
 
->![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat2_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat2_zh.png)
+>![](/screenshot/MyTomcat2_en.png)![](/screenshot/MyTomcat2_zh.png)
 
->![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat3_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat3_zh.png)
+>![](/screenshot/MyTomcat3_en.png)![](/screenshot/MyTomcat3_zh.png)
 
->![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat4_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat4_zh.png)
+>![](/screenshot/MyTomcat4_en.png)![](/screenshot/MyTomcat4_zh.png)
 
->![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat5.png)
+>![](/screenshot/MyTomcat5.png)
 
 # 欢迎使用MyTomcat
 
