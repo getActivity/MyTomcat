@@ -6,7 +6,7 @@
 
 >[Click on the download MyTomcat installation program](https://github.com/getActivity/MyTomcat/MyTomcat_3.0.apk)
 
->![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat1_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat1_zh.png)
+>![](/screenshot/MyTomcat1_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat1_zh.png)
 
 >![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat2_en.png)![](https://github.com/getActivity/MyTomcat/screenshot/MyTomcat2_zh.png)
 
