@@ -2,9 +2,9 @@
 
 # intro
 
->[点击下载MyTomcat安装程序](https://github.com/getActivity/MyTomcat/MyTomcat_3.0.apk)
+>[点击下载MyTomcat安装程序](https://raw.githubusercontent.com/getActivity/MyTomcat/master/MyTomcat_3.0.apk)
 
->[Click on the download MyTomcat installation program](https://github.com/getActivity/MyTomcat/MyTomcat_3.0.apk)
+>[Click on the download MyTomcat installation program](https://raw.githubusercontent.com/getActivity/MyTomcat/master/MyTomcat_3.0.apk)
 
 >![](/screenshot/MyTomcat1_en.png)![](/screenshot/MyTomcat1_zh.png)
 
