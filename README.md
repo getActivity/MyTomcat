@@ -21,25 +21,33 @@
 
 # Welcome to use MyTomcat
 
->基于HTTP协议制作的服务器，支持GET和POST请求
+> 本文档不再进行维护，[点击查看最新文档](https://github.com/getActivity/MyTomcat)
 
->Based on the HTTP protocol server, support the GET and POST requests
+> This document is no longer maintained, [click to view the latest document](https://github.com/getActivity/MyTomcat)
 
->能跨设备进行访问，支持访问和上传文件，断点续传，操作SQLite数据库
+> 基于HTTP协议制作的服务器，支持GET和POST请求
 
->Can other device access, support access and upload files, breakpoint continuingly, SQLite database operation
+> Based on the HTTP protocol server, support the GET and POST requests
 
->对带中文URL和中文参数有比较好的支持
+> 能跨设备进行访问，支持访问和上传文件，断点续传，操作SQLite数据库
 
->With Chinese URL and Chinese parameters have good support
+> Can other device access, support access and upload files, breakpoint continuingly, SQLite database operation
+
+> 对带中文URL和中文参数有比较好的支持
+
+> With Chinese URL and Chinese parameters have good support
+
+> 支持被局域网（内网）的设备访问，如需要被广域网（外网）的设备访问，请设置内网映射，并联系你的运营商
+
+> Support is a local area network (Intranet) device access, such as the need to be wan (net) device access, please set up the network mapping, and contact your operator
 
 ## 访问服务器
 
 ## Access to the server
 
->服务器与客户端处于同一个设备上
+> 服务器与客户端处于同一个设备上
 
->The client and server in the same device
+> The client and server in the same device
 
 	http://127.0.0.1: + port
 	http://localhost: + port
@@ -49,9 +57,9 @@
 	http://127.0.0.1:8888
 	http://localhost:8888
 
->跨设备访问，在同一局域网环境下，使用当前服务器设备的IP地址，推荐使用静态IP
+> 跨设备访问，在同一局域网环境下，使用当前服务器设备的IP地址，推荐使用静态IP
 
->Different devices for a visit, In the same LAN environment, using the current IP address of the server device, it is recommended to use a static IP
+> Different devices for a visit, In the same LAN environment, using the current IP address of the server device, it is recommended to use a static IP
 
 	http:// + host address + ":" + port
 
@@ -59,97 +67,97 @@
 
 	http://192.168.1.123：8888
 
->请注意：模拟器创建的服务端将无法被其他设备访问
+> 请注意：模拟器创建的服务端将无法被其他设备访问
 
->Please note: simulator to create the server will not be able to make other device access
+> Please note: simulator to create the server will not be able to make other device access
 
->如果您想改变访问的主页，请到设置中进行更改
+> 如果你想改变访问的主页，请到设置中进行更改
 
->If you want to change the home page access, please make changes to the Settings
+> If you want to change the home page access, please make changes to the Settings
 
 ## 访问服务器上的文件
 
 ## To access the file on the server
 
->若您设置了以 /mnt/sdcard/（SD卡根目录） 为服务目录
+> 若你设置了以 /mnt/sdcard/（SD卡根目录） 为服务目录
 
->If you set to /mnt/sdcard/ (SD kagan directory) for the service directory
+> If you set to /mnt/sdcard/ (SD kagan directory) for the service directory
 
->若您想访问服务器上的 /mnt/sdcard/MyTomcat.apk 文件
+> 若你想访问服务器上的 /mnt/sdcard/MyTomcat.apk 文件
 
->If you want to access server /mnt/sdcard/MyTomcat.apk file
+> If you want to access server /mnt/sdcard/MyTomcat.apk file
 
->可以使用以下地址进行访问该资源，访问成功将返回响应码200，若这个文件不存在则返回响应码404
+> 可以使用以下地址进行访问该资源，访问成功将返回响应码200，若这个文件不存在则返回响应码404
 
->You can use the following address to access the resources, access successfully returns the response code 200, if the file does not exist, it returns the response code 404
+> You can use the following address to access the resources, access successfully returns the response code 200, if the file does not exist, it returns the response code 404
 
 	http://127.0.0.1:8888/MyTomcat.apk
 
->这种方式比较快捷，但并不推荐此方法，推荐如下两种方式
+> 这种方式比较快捷，但并不推荐此方法，推荐如下两种方式
 
->This way is quick, but does not recommend this method, recommend the following two ways
+> This way is quick, but does not recommend this method, recommend the following two ways
 
 ## GET请求带参数访问服务器上的文件
 
 ## GET request with parameter access the file on the server
 
->在参数“path”加上需要访问的文件地址，地址根据您设置的服务器目录而定
+> 在参数“path”加上需要访问的文件地址，地址根据你设置的服务器目录而定
 
->In the parameter "path" add need to access the file address, the address according to you to set the server directory
+> In the parameter "path" add need to access the file address, the address according to you to set the server directory
 
 	http://127.0.0.1:8888/file?path=
 
->若您设置了以 /mnt/sdcard/（SD卡根目录） 为服务目录
+> 若你设置了以 /mnt/sdcard/（SD卡根目录） 为服务目录
 
->If you set to /mnt/sdcard/ (SD kagan directory) for the service directory
+> If you set to /mnt/sdcard/ (SD kagan directory) for the service directory
 
->若您想访问服务器上的 /mnt/sdcard/MyTomcat.apk 文件
+> 若你想访问服务器上的 /mnt/sdcard/MyTomcat.apk 文件
 
->If you want to access server /mnt/sdcard/MyTomcat.apk file
+> If you want to access server /mnt/sdcard/MyTomcat.apk file
 
->可以使用以下地址进行访问该资源，访问成功将返回响应码200，若这个文件不存在则返回响应码404
+> 可以使用以下地址进行访问该资源，访问成功将返回响应码200，若这个文件不存在则返回响应码404
 
->You can use the following address to access the resources, access successfully returns the response code 200, if the file does not exist, it returns the response code 404
+> You can use the following address to access the resources, access successfully returns the response code 200, if the file does not exist, it returns the response code 404
 
 	http://127.0.0.1:8888/file?path=MyTomcat.apk
 
->以您的设置的服务目录为基准，以服务目录中的文件路径作为参数，但不包含服务目录所在路径名称
+> 以你的设置的服务目录为基准，以服务目录中的文件路径作为参数，但不包含服务目录所在路径名称
 
->Based on your setup service directory, to serve in the directory path to the file as a parameter, but does not include the service directory in the path name
+> Based on your setup service directory, to serve in the directory path to the file as a parameter, but does not include the service directory in the path name
 
->若您想访问包含中文路径的文件，可以通过对参数值进行编码 “MyTomcat.apk”，请不要对参数名进行编码 “?path=”
+> 若你想访问包含中文路径的文件，可以通过对参数值进行编码 “MyTomcat.apk”，请不要对参数名进行编码 “?path=”
 
->If you want to access files, including the Chinese path can be based on the parameter value is encoded "MyTomcat.apk" , careful not to encode parameter name "?path =".
+> If you want to access files, including the Chinese path can be based on the parameter value is encoded "MyTomcat.apk" , careful not to encode parameter name "?path =".
 
 	URLDecoder.decode(String s, String charsetName);
 
->s：是需要被编码的字符串
+> s：是需要被编码的字符串
 
->s: it is need to be encoded string
+> s: it is need to be encoded string
 
->charsetName：编码的字符编码，建议使用UTF-8，服务器上设置的字符编码必须和此编码一致，否则会导致乱码
+> charsetName：编码的字符编码，建议使用UTF-8，服务器上设置的字符编码必须和此编码一致，否则会导致乱码
 
->Is coded character encoding, it is recommended to use utf-8, set the character encoding on the server must be in accordance with this code, otherwise it will lead to the messy code
+> Is coded character encoding, it is recommended to use utf-8, set the character encoding on the server must be in accordance with this code, otherwise it will lead to the messy code
 
 	"http://127.0.0.1:8888/file?path=" + URLDecoder.decode("MyTomcat.apk", "UTF-8");
 
->GET请求也支持中文，步骤比较繁琐，推荐您使用POST请求进行访问
+> GET请求也支持中文，步骤比较繁琐，推荐你使用POST请求进行访问
 
->GET request also supports Chinese, steps more complicated, it is recommended that you use a POST request for a visit
+> GET request also supports Chinese, steps more complicated, it is recommended that you use a POST request for a visit
 
 ## POST请求带参数访问服务上的文件
 
 ## POST request with parameter access the file on the server
 
->GET和Post请求的区别在于，GET请求的参数是通过URL传递给服务器的，而POST将参数作为输出流传递到服务器
+> GET和Post请求的区别在于，GET请求的参数是通过URL传递给服务器的，而POST将参数作为输出流传递到服务器
 
->The difference between the GET and Post requests, the parameters of the GET request is passed through the URL to the server, and Post transfer parameters as the output stream to the server
+> The difference between the GET and Post requests, the parameters of the GET request is passed through the URL to the server, and Post transfer parameters as the output stream to the server
 
->如果您的URL里面包含中文参数，建议使用此方法，您必须确保该服务器上的字符编码支持中文才不会乱码
+> 如果你的URL里面包含中文参数，建议使用此方法，你必须确保该服务器上的字符编码支持中文才不会乱码
 
->If your URL contains Chinese parameters, it is recommended to use this method, you must make sure that the server will not garbled character encoding support Chinese
+> If your URL contains Chinese parameters, it is recommended to use this method, you must make sure that the server will not garbled character encoding support Chinese
 
->使用基本与GET无太大差别，若想访问上一个例子（GET请求）上的文件
+> 使用基本与GET无太大差别，若想访问上一个例子（GET请求）上的文件
 
 >Using basic and GET no much difference, if you want to visit an example of the GET request on file
 
@@ -169,55 +177,55 @@
 
 ## Breakpoint continuingly on file
 
->这个功能需要通过参数进行告知服务器
+> 这个功能需要通过参数进行告知服务器
 
->This feature requires via parameters to the server
+> This feature requires via parameters to the server
 
->您若想获取文件的部分内容，支持GET和POST，GET请求为例子，可以直接在URL加入参数
+> 你若想获取文件的部分内容，支持GET和POST，GET请求为例子，可以直接在URL加入参数
 
->If you want to GET part of the file content, support the GET and POST, GET requests for example, can be directly in the URL parameter
+> If you want to GET part of the file content, support the GET and POST, GET requests for example, can be directly in the URL parameter
 
->访问成功将返回响应码200，若这个文件不存在则返回响应码404
+> 访问成功将返回响应码200，若这个文件不存在则返回响应码404
 
->Access successfully returns the response code 200, if the file does not exist then returns a response code 404
+> Access successfully returns the response code 200, if the file does not exist then returns a response code 404
 
 	http://127.0.0.1:8888/file?path=MyTomcat/MyTomcat.apk&range=1000
 
->注意：“range” 参数是指文件内容的起始位置，用于获取文件从这个位置开始后面的内容
+> 注意：“range” 参数是指文件内容的起始位置，用于获取文件从这个位置开始后面的内容
 
->Note: "range" parameter is refers to the starting position of the file content, used to get files from this location at the back of the content
+> Note: "range" parameter is refers to the starting position of the file content, used to get files from this location at the back of the content
 
 ## 使用POST请求上传文件
 
 ## Use a POST request to upload files
 
->上传文件只能使用POST请求的方式进行，不支持GET请求，不支持断点续传
+> 上传文件只能使用POST请求的方式进行，不支持GET请求，不支持断点续传
 
->Upload files can only use a POST request manner, does not support a GET request, does not support breakpoint continuingly
+> Upload files can only use a POST request manner, does not support a GET request, does not support breakpoint continuingly
 
->建议您不要上传超过 30MB 的文件，否则您的程序可能会内存溢出，实际请根据您的设备实际为准
+> 建议你不要上传超过 30MB 的文件，否则你的程序可能会内存溢出，请根据你的设备实际情况为准
 
->It is recommended that you do not upload more than 30 MB of file, otherwise your application may be out of memory, please according to your actual equipment actual shall prevail
+> It is recommended that you do not upload more than 30 MB of file, otherwise your application may be out of memory, please according to the actual circumstance of your device
 
->上传成功后则返回响应码200，上传失败则返回响应码412
+> 上传成功后则返回响应码200，上传失败则返回响应码412
 
 >Uploaded successfully after it returns the response code 200, upload fails then returns a response code 412
 
->需要严格设置读取时长，否则可能会出现文件已经上传但客户端读取响应码超时导致失败，建议这样设置
+> 需要严格设置读取时长，否则可能会出现文件已经上传但客户端读取响应码超时导致失败，建议这样设置
 
->To strictly set the read time, otherwise it may appear file has been uploaded but the client reads the response code overtime result in failure, suggest such Settings
+> To strictly set the read time, otherwise it may appear file has been uploaded but the client reads the response code overtime result in failure, suggest such Settings
 
 	conn.setReadTimeout((int) (file.length() / 128 + 2048));
 
->读取时长是指客户端等待的最大时长，服务器处理完后会立马响应，具体处理时长和网络环境有关
+> 读取时长是指客户端等待的最大时长，服务器处理完后会立马响应，具体处理时长和网络环境有关
 
->Read time refers to the biggest client waiting time, after the server processing immediately response, processing time and the network environment
+> Read time refers to the biggest client waiting time, after the server processing immediately response, processing time and the network environment
 
->这种算法不一定符合程序的要求，请结合实际的需求
+> 这种算法不一定符合程序的要求，请结合实际的需求
 
->This algorithm may not accord with the requirement of application, combining with the actual demand, please
+> This algorithm may not accord with the requirement of application, combining with the actual demand, please
 
->您需要将文件作为POST请求的输出流传递给服务器，同时需要在请求头指定该文件的信息
+> 你需要将文件作为POST请求的输出流传递给服务器，同时需要在请求头指定该文件的信息
 
 >You need to file as the output of the POST request passed to the server, also need the file specified in the request header information
 
@@ -228,14 +236,14 @@
 
 ---
 
-	//服务器返回内容长度，使用断点续传则返回您请求的文件大小减去忽略的字节数
+	//服务器返回内容长度，使用断点续传则返回你请求的文件大小减去忽略的字节数
 	//The server returns the content length, using breakpoint continuingly returns you requested file size minus ignore the number of bytes
 
 	Content-Length
 
 ---
 
-	//您可以设置此属性让服务比对上传后的文件MD5值，若MD5没有指定，则返回响应码200，若MD5与服务器上的文件不符合，则返回响应码412
+	//你可以设置此属性让服务比对上传后的文件MD5值，若MD5没有指定，则返回响应码200，若MD5与服务器上的文件不符合，则返回响应码412
 	//you can set this property to service than after the upload file MD5 value, if the MD5 is not specified, it returns the response code 200, if the MD5 and the file on the server does not conform to, it returns the response code 412
 
 	Content-MD5
@@ -244,13 +252,13 @@
 
 ## The server returns some response header information
 
->注意：只有在使用带参数的请求访问文件和上传文件才会返回这些响应头信息
+> 注意：只有在使用带参数的请求访问文件和上传文件才会返回这些响应头信息
 
->Note: only the using request access to the file with parameters and upload files will return these response headers
+> Note: only the using request access to the file with parameters and upload files will return these response headers
 
 ---
 
-	//文件在服务器上的名称，希望您的应用给这个文件命名的名称，一般为请求时的文件名
+	//文件在服务器上的名称，希望你的应用给这个文件命名的名称，一般为请求时的文件名
 	//The name of the file on the server, in the hope that your application for the file name, the name of the general for the request of the file name
 	//请使用URLDecoder.decode进行解码再使用
 	//Please use URLDecoder. Decode decoding to use again
@@ -268,7 +276,7 @@
 
 ---
 
-	//服务器返回内容长度，使用断点续传则返回您请求的文件大小减去忽略的字节数
+	//服务器返回内容长度，使用断点续传则返回你请求的文件大小减去忽略的字节数
 	//The server returns the content length, using breakpoint continuingly returns you requested file size minus ignore the number of bytes
 
 	Content-Length
@@ -289,25 +297,25 @@
 
 ## 操作服务器上的SQLite数据库
 
->仅支持操作SQLite数据库，只能使用POST请求，不支持GET请求
+> 仅支持操作SQLite数据库，只能使用POST请求，不支持GET请求
 
->Only supports SQLite database operation, can only use a POST request, does not support a GET request
+> Only supports SQLite database operation, can only use a POST request, does not support a GET request
 
->客户端通过JSON文本来请求操作数据库，需要将JSON文本封装到输出流中，然后传递给服务器
+> 客户端通过JSON文本来请求操作数据库，需要将JSON文本封装到输出流中，然后传递给服务器
 
->Client requests through JSON text database operation, need to encapsulate a JSON text into the output stream, and then passed to the server
+> Client requests through JSON text database operation, need to encapsulate a JSON text into the output stream, and then passed to the server
 
->服务器会对JSON进行解析，将结果转换成JSON文本返回客户端
+> 服务器会对JSON进行解析，将结果转换成JSON文本返回客户端
 
->Server will be to parse JSON, transform the results into a JSON text back to the client
+> Server will be to parse JSON, transform the results into a JSON text back to the client
 
->注意：如果您请求的JSON数据包含中文，请在服务器设置支持中文的字符编码，否则会乱码
+> 注意：如果你请求的JSON数据包含中文，请在服务器设置支持中文的字符编码，否则会乱码
 
->Note: if you request the JSON data contains Chinese, please in the server Settings to support Chinese character encoding, otherwise you will stil messy code
+> Note: if you request the JSON data contains Chinese, please in the server Settings to support Chinese character encoding, otherwise you will stil messy code
 
->目前服务器仅支持以下几种操作数据库的API
+> 目前服务器仅支持以下几种操作数据库的API
 
->The server only supports the following operations database API
+> The server only supports the following operations database API
 
 	public void execSQL(String sql, Object[] bindArgs)
 
@@ -333,27 +341,27 @@
             			String[] selectionArgs, String groupBy, String having,
             			String orderBy, String limit)
 
->目前服务器只支持解析以上参数的 SQLite 语句，若返回是Cursor会封装成JSON文本输出到客户端
+> 目前服务器只支持解析以上参数的 SQLite 语句，若返回是Cursor会封装成JSON文本输出到客户端
 
->The server only supports the above analytical parameters of SQLite statement, if the return is the Cursor will be encapsulated into JSON text output to the client
+> The server only supports the above analytical parameters of SQLite statement, if the return is the Cursor will be encapsulated into JSON text output to the client
 
->您必须熟悉JSON的生成和解析，才能确保服务器能正确识别您的命令
+> 你必须熟悉JSON的生成和解析，才能确保服务器能正确识别你的命令
 
->You must be familiar with to parse and generate JSON, can ensure that the server can correctly identify your order
+> You must be familiar with to parse and generate JSON, can ensure that the server can correctly identify your order
 
 > API 中的 String 参数类型以 JSONObject 表示，数组参数类型和 ContentValues 参数类型以JSONArray表示
 
->In the API string parameters type expressed as a JSONObject, array parameter type and ContentValues parameter expressed as a JSONArray
+> In the API string parameters type expressed as a JSONObject, array parameter type and ContentValues parameter expressed as a JSONArray
 
->如果您不需要为这个参数类型指定任何的JSONObject，可以直接忽略
+> 如果你不需要为这个参数类型指定任何的JSONObject，可以直接忽略
 
->If you do not need to specify any for this parameter type JSONObject, can be ignored directly
+> If you do not need to specify any for this parameter type JSONObject, can be ignored directly
 
 ---
 
->您必须在请求的 JSON 中必须指定以下内容
+> 你必须在请求的 JSON 中必须指定以下内容
 
->You must be in request JSON must specify the following content
+> You must be in request JSON must specify the following content
 
 * path：键为 JSONObject 类型，值为 String 类型，数据库文件所在路径名称，请填写数据库在服务目录中所在位置，不能进行编码，类型为JSONObject
 
@@ -381,17 +389,17 @@
 
 ---
 
->服务器一定会返回以下 JSON 内容
+> 服务器一定会返回以下 JSON 内容
 
->The server will return the following JSON content
+> The server will return the following JSON content
 
 * result：键为 JSONObject 类型，值为 long 类型，是数据库操作语句返回值或者Cursor对象的总数
 
 * result: Key for JSONObject types, the value of long type, the return value is the database operation statements or the total number of Cursor object
 
->另外查询语句返回了cursor对象，服务器会返回以下这些数据
+> 另外查询语句返回了cursor对象，服务器会返回以下这些数据
 
->Another query returns a cursor object, the server will return the following these data
+> Another query returns a cursor object, the server will return the following these data
 
 * columnNames：键为 JSONArray 类型，值为 ArrayList 类型，为服务器查询返回的Cursor中所有字段的名称
 
@@ -427,16 +435,16 @@
 
 ---
 
->使用原生的API解析
+> 使用原生的Android API解析
 
->Using the native API
+> Using the native API
 
 	JSONObject jsonObject = new JSONObject(json);
 	System.out.println("Test：" + jsonObject.getLong("result") + jsonObject.getJSONArray("columnNames") + jsonObject.getJSONArray("cursor"));
 
->使用第三方框架Gson解析
+> 使用Android第三方框架Gson解析
 
->Using a third party framework Gson parsing
+> Using a third party framework Gson parsing
 
 	Gson gson = new Gson();
 	SQLiteCursorBean bean = gson.fromJson(json, SQLiteCursorBean.class);
@@ -445,9 +453,9 @@
 
 ## For operating the server SQLite database tools is presented
 
->SQLiteCursorBean.java：服务器返回的 JSON 文本，可以使用这个类供第三方框架 Gson 进行解析
+> SQLiteCursorBean.java：服务器返回的 JSON 文本，可以使用这个类供第三方框架 Gson 进行解析
 
->SQLiteCursorBean.java: The server returns JSON text, Can use this class to a third party framework Gson parsing
+> SQLiteCursorBean.java: The server returns JSON text, Can use this class to a third party framework Gson parsing
 
 	package com.hjq.mytomcat.bean;
 	
@@ -477,9 +485,9 @@
 		public ArrayList<JSONObject> cursor;
 	}
 
->RequestSQLiteUtils.java：客户端请求服务器的工具类，可以使用这个类快速生成 JSON 文本
+> RequestSQLiteUtils.java：客户端请求服务器的工具类，可以使用这个类快速生成 JSON 文本
 
->RequestSQLiteUtils.java: Client requests the server tools, you can use this class quickly generate JSON text
+> RequestSQLiteUtils.java: Client requests the server tools, you can use this class quickly generate JSON text
 
 	package com.hjq.mytomcat.bean;
 	
@@ -593,9 +601,9 @@
 		}
 	}
 
->JsonUtils.java：这是一个转换的工具类，包含了客户端和服务器的工具类的源码，配合上一个类使用
+> JsonUtils.java：这是一个转换的工具类，包含了客户端和服务器的工具类的源码，配合上一个类使用
 
->JsonUtils.java:This is a conversion tool class, including the source of the client and server tools class, coupled with a class to use
+> JsonUtils.java:This is a conversion tool class, including the source of the client and server tools class, coupled with a class to use
 
 	package com.hjq.mytomcat.bean;
 	
@@ -785,25 +793,25 @@
 
 ## Request to redirect
 
->请求重定向是浏览器在访问服务器时，服务器将这个请求转到了另外一个URL地址上，所携带的路径、参数、流、请求头都会交给新的URL地址所在的服务器进行处理
+> 请求重定向是浏览器在访问服务器时，服务器将这个请求转到了另外一个URL地址上，所携带的路径、参数、流、请求头都会交给新的URL地址所在的服务器进行处理
 
->Request is redirect the browser when access to the server, the server will turn this request to another URL, carries path, parameters, flow, request header will be handed over to the new URL address of the server for processing
+> Request is redirect the browser when access to the server, the server will turn this request to another URL, carries path, parameters, flow, request header will be handed over to the new URL address of the server for processing
 
->如果当前的服务器上的地址为
+> 如果当前的服务器上的地址为
 
->If the current server address is
+> If the current server address is
 
 	http://192.168.1.126:8888/
 
->如果设置的请求重定向URL为
+> 如果设置的请求重定向URL为
 
->If set the request redirection URL
+> If set the request redirection URL
 
 	http://192.168.1.119:8888/
 
->访问的当前服务器URL会跳转到重定向URL
+> 访问的当前服务器URL会跳转到重定向URL
 
->Access to the current server URL will jump to redirect URL
+> Access to the current server URL will jump to redirect URL
 
 	http://192.168.1.126:8888/    --->    http://192.168.1.119:8888/
 
@@ -811,61 +819,61 @@
 
 ## Character encoding
 
->提供了修改字符编码的设置，您可以点击通知栏上的进入设置
+> 提供了修改字符编码的设置，你可以点击通知栏上的进入设置
 
->Provides a modified character encoding Settings, you can click on the notification bar into the set
+> Provides a modified character encoding Settings, you can click on the notification bar into the set
 
->如果您选择了某一种编码，很大程度上决定服务器解析和返回数据的所用编码
+> 如果你选择了某一种编码，很大程度上决定服务器解析和返回数据的所用编码
 
->If you select the one encoding, largely determine server parsing and encoding used to return data
+> If you select the one encoding, largely determine server parsing and encoding used to return data
 
->如果您的文本里面包含中文，强烈推荐使用UTF-8为默认字符编码
+> 如果你的文本里面包含中文，强烈推荐使用UTF-8为默认字符编码
 
->If your text contains Chinese, strongly recommended to use utf-8 as the default character encoding
+> If your text contains Chinese, strongly recommended to use utf-8 as the default character encoding
 
->字符编码决定了服务器解析URL和参数的编码，和您解析文本文档所用的编码格式
+> 字符编码决定了服务器解析URL和参数的编码，和你解析文本文档所用的编码格式
 
->Character encoding decided the server to parse the URL and parameters of coding, coding format used in the analytical text documents with you
+> Character encoding decided the server to parse the URL and parameters of coding, coding format used in the analytical text documents with you
 
->字符编码至关重要，请不要设置与其无关的内容，不然会出现乱码
+> 字符编码至关重要，请不要设置与其无关的内容，不然会出现乱码
 
->Character encoding is critical, please don't set has nothing to do with its content, or it will appear garbled
+> Character encoding is critical, please don't set has nothing to do with its content, or it will appear garbled
 
 ## 响应码
 
 ## Response code
 
->200：响应成功
+> 200：响应成功
 
->200：Response  success
+> 200：Response  success
 
->400：请求有误
+> 400：请求有误
 
->400：Request is wrong
+> 400：Request is wrong
 
->404：请求的资源不存在
+> 404：请求的资源不存在
 
->404：Requested resource does not exist
+> 404：Requested resource does not exist
 
->412：未满足请求条件
+> 412：未满足请求条件
 
->412：Did not meet the request
+> 412：Did not meet the request
 
->500：服务器内部错误
+> 500：服务器内部错误
 
->500：Server internal error
+> 500：Server internal error
 
->503：服务不可用
+> 503：服务不可用
 
->503：Service is not available
+> 503：Service is not available
 
-## 参考代码
+## Java 代码参考
 
-## Reference code
+## Java Code Reference
 
->GET请求
+> GET请求
 
->GET request
+> GET request
 
 	URL url = new URL(path);
 					
@@ -885,9 +893,9 @@
 		System.out.println(text);
 	}
 
->POST请求
+> POST请求
 
->POST request
+> POST request
 
 	URL url = new URL(path);
 	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -911,9 +919,9 @@
 		System.out.println(text);
 	}
 
->上传文件
+> 上传文件
 
->Upload file
+> Upload file
 
 	URL url = new URL(path);
 	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -950,9 +958,9 @@
 		System.out.println(conn.getHeaderFields().get("Content-MD5").get(0));
 	}
 
->操作SQLite数据库
+> 操作SQLite数据库
 
->SQLite database operation
+> SQLite database operation
 
 	URL url = new URL(path);
 	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -975,9 +983,9 @@
 		System.out.println(json);
 	}
 
->将字节读取流转换成文本的工具类，客户端需要指定字符编码
+> 将字节读取流转换成文本的工具类，客户端需要指定字符编码
 
->To circulate the bytes read into the text tool, the client need to specify the character encoding
+> To circulate the bytes read into the text tool, the client need to specify the character encoding
 
 	public String getTextFromStream(InputStream in) throws IOException 
 	{
@@ -991,6 +999,6 @@
 		return text;
 	}
 
->若您有任何疑问或反馈，可以发邮件到880634@qq.com
+> 若你有任何疑问或反馈，可以发邮件到880634@qq.com
 
->If you have any queries or feedback, you can send email to jinqun0730@gmail.com
+> If you have any queries or feedback, you can send email to jinqun0730@gmail.com
